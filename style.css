@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(73, 16, 139);
+}
+
+#canvas {
+    border: solid 1px rgb(69, 255, 202);
+    cursor: crosshair;
+}
+
+#reset {
+    margin-left: 30px;
+    cursor: pointer;
+    background: white;
+    color: rgb(73, 16, 139);
+    border: 3px solid rgb(126, 48, 225);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 8px;
+}
