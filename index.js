@@ -7,15 +7,16 @@ function getMousePos(e) {
     return {
         x: e.clientX - rect.left,
         y: e.clientY - rect.top
-    }
-}
+    };
+};
 
 function mouseMove(e) {
     const mousePos = getMousePos(e);
     ctx.lineTo(mousePos.x, mousePos.y);
     ctx.stroke();
     ctx.strokeStyle = "rgb(254, 255, 172)";
-}
+    ctx.lineWidth = 8;
+};
 
 canvas.addEventListener('mousedown', (e) => {
     e.preventDefault();
@@ -25,4 +26,11 @@ canvas.addEventListener('mousedown', (e) => {
     ctx.moveTo(mousePos.x, mousePos.y);
 
     canvas.addEventListener('mousemove', mouseMove);
+    canvas.addEventListener('mouseup', () => {
+        canvas.removeEventListener('mousemove', mouseMove);
+    });
+});
+
+reset.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 })
