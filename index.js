@@ -45,9 +45,7 @@ document.addEventListener('dragstart', (e) => {
     item = e.target;
 });
 
-document.addEventListener('dragover', (e) => {
-    e.preventDefault();
-});
+document.addEventListener('dragover', (e) => e.preventDefault());
 
 // On permet de drop l'élément seulement dans les éléments html ayant la data-draggable à "target" pour éviter de placer les éléments n'importe où
 document.addEventListener('drop', (e) => {

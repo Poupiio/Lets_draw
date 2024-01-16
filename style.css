@@ -24,69 +24,73 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-bottom: 70px;
+
+    .canvas-container::after {
+        content: "";
+        width: 80%;
+        height: 2px;
+        background: #B6FFFA;
+        display: block;
+        border-radius: 8px;
+    }
+    
+    #canvas {
+        border: dotted 18px rgb(254, 255, 172);
+        cursor: crosshair;
+        margin: 15px 15px 0;
+    }
+    
+    #reset {
+        margin: 25px 0;
+        cursor: pointer;
+        background: white;
+        color: rgb(73, 16, 139);
+        border: 3px solid rgb(126, 48, 225);
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 8px;
+        transition: 0.3s ease-in-out;
+    }
+    
+    #reset:hover {
+        box-shadow: 0px 0px 13px 3px rgb(255, 161, 245);
+        transform: translateX(-4px);
+    }
+
 }
 
-.canvas-container::after {
-    content: "";
-    width: 80%;
-    height: 2px;
-    background: #B6FFFA;
-    display: block;
-    border-radius: 8px;
-}
-
-#canvas {
-    border: dotted 18px rgb(254, 255, 172);
-    cursor: crosshair;
-    margin: 15px 15px 0;
-}
-
-#reset {
-    margin: 25px 0;
-    cursor: pointer;
-    background: white;
-    color: rgb(73, 16, 139);
-    border: 3px solid rgb(126, 48, 225);
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding: 8px;
-    transition: 0.3s ease-in-out;
-}
-
-#reset:hover {
-    box-shadow: 0px 0px 13px 3px rgb(255, 161, 245);
-    transform: translateX(-4px);
-}
 
 /* ________________________________________________________________ */
 
 .drag-drop-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 50px;
-}
 
-ul, li {
-    border: solid 1px #80B3FF;
-    border-radius: 8px;
-}
+    ul, li {
+        border: solid 1px #80B3FF;
+        border-radius: 8px;
+    }
+    
+    ul {
+        background: rgb(182, 255, 250);
+        width: 250px;
+        height: 400px;
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    li {
+        background: #98E4FF;
+        color: rgb(73, 16, 139);
+        padding: 10px 15px;
+        text-align: center;
+        margin: 10px auto;
+        font-weight: 500;
+        cursor: pointer;
+    }
 
-ul {
-    background: rgb(182, 255, 250);
-    width: 250px;
-    height: 400px;
-    margin: 10px;
-    padding: 20px;
-}
-
-li {
-    background: #98E4FF;
-    color: rgb(73, 16, 139);
-    padding: 10px 15px;
-    text-align: center;
-    margin: 10px auto;
-    font-weight: 500;
-    cursor: pointer;
 }
